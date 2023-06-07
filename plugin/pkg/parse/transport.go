@@ -31,6 +31,9 @@ func Transport(s string) (trans string, addr string) {
 		s = s[len(transport.QUIC+"://"):]
 		return transport.QUIC, s
 
+	case strings.HasPrefix(s, transport.SQUIC+"://"):
+		s = s[len(transport.SQUIC+"://"):]
+		return transport.SQUIC, s
 	}
 
 	return transport.DNS, s

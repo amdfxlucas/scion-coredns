@@ -6,6 +6,7 @@ const (
 	TLS   = "tls"
 	GRPC  = "grpc"
 	QUIC  = "quic"
+	SQUIC = "squic"
 	HTTPS = "https"
 )
 
