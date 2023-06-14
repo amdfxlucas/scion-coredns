@@ -27,7 +27,7 @@ require (
 	github.com/prometheus/client_model v0.4.0
 	github.com/prometheus/common v0.43.0
 	github.com/quic-go/quic-go v0.34.0
-	go.etcd.io/etcd/api/v3 v3.5.8
+	go.etcd.io/etcd/api/v3 v3.5.9
 	go.etcd.io/etcd/client/v3 v3.5.8
 	golang.org/x/crypto v0.9.0
 	golang.org/x/sys v0.8.0
