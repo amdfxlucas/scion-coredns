@@ -19,7 +19,8 @@
             },
 //            "args": [ "example.org", "quic://localhost:8853"]
             //"args": [ "example.org", "squic://19-ffaa:1:1067,[127.0.0.1]:8853"]
-            "args": [ "dummy.luki.test.home", "squic://19-ffaa:1:1067,[127.0.0.1]:8853"]
+            //"args": [ "dummy.luki.test.home", "squic://19-ffaa:1:1067,[127.0.0.1]:8853"]
+            "args": [ "fin.ovgu.de", "squic://19-ffaa:1:1067,[127.0.0.1]:5553"]
 
         },
         {

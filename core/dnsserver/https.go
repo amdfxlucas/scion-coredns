@@ -18,6 +18,8 @@ type DoHWriter struct {
 
 	// request is the HTTP request we're currently handling.
 	request *http.Request
+	// protocol i.e. udp, tcp, quic
+	//proto string
 }
 
 // RemoteAddr returns the remote address.

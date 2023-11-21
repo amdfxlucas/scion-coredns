@@ -1,0 +1,37 @@
+
+#dig -x 17-ffaa:0:1102,129.132.121.164
+# QUESTION SECTION:  164.121.132.17-ffaa:0:1102,129.in-addr.arpa. IN        PTR
+
+
+# dig -x 17-ffaa:0:1102.129.132.121.164 ersetzt man das ',' auch durch '.' (und löscht etwaige '[]' um den host anteil )
+#;; QUESTION SECTION:
+#;164.121.132.129.17-ffaa:0:1102.in-addr.arpa. IN        PTR
+
+
+# ich schlage vor, das ':' in AS zu ersetzen durch '-' 
+# und das ',' durch '.'  ?? hätt den vorteil, dass die Reihenfolge dort umgekehrt würde, sodass Host dann vor IA (Is-As) steht
+# '[' durch ?? veilleicht ein Buchstabe größer als F , der nicht hexadezimal ist
+# ']' durch    oder einfach löschen(durch '' nix ersetzen, da sie eigentlich überflüssig sind)
+
+
+# 17-ffaa:0:1102,129.132.121.164 => 17-ffa-0-1102.129.132.121.164
+# dig -x 17-ffa-0-1102.129.132.121.164
+#;; QUESTION SECTION:
+#;164.121.132.129.17-ffa-0-1102.in-addr.arpa. IN PTR
+
+
+# 1-ff00:0:300,[f00d::1337] => 1-ff00-0-300.[f00d:0000:0000:0000:0000:0000:0000:1337] 
+
+
+1-ff00-0-300.[f00d:0000:0000:0000:0000:0000:0000:1337] => 1-ff00-0-300.f00d.0000.0000.0000.0000.0000.0000.1337
+
+1-ff00-0-300.f00d.0000.0000.0000.0000.0000.0000.1337 => 1337.0000.0000.0000.0000.0000.0000.f00d.1-ff00-0-300
+
+1337.0000.0000.0000.0000.0000.0000.f00d.1-ff00-0-300 =>  1337.0000.0000.0000.0000.0000.0000.f00d.1-ff00-0-300.ip6.arpa. IN PTR my-secret.dummy.domain.
+
+
+
+
+
+
+19-ffaa:1:1067,[10.0.2.15] =>19-ffaa:1:1067.10.0.2.15  => 15.2.0.10.19-ffaa-1-1067 => 15.2.0.10.19-ffaa-1-1067.in-addr.arpa. IN PTR my.second.test.dummy.

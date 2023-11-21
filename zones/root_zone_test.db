@@ -1,0 +1,17 @@
+$TTL    604800
+@    IN    SOA    ns1. . (
+                  3        ; Serial
+             604800        ; Refresh
+              86400        ; Retry
+            2419200        ; Expire
+             604800 )    ; Negative Cache TTL
+;
+; name servers - NS records
+@    IN    NS    ns1
+
+; name servers - A records
+ns1.    IN    A    192.168.0.11
+
+; 20'000x A Records for dummy domain
+dummy.luki.test.home.    IN    A    192.0.0.1
+dummy.luki.test.home.    IN    A    192.0.0.2

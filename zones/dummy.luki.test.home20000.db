@@ -1,4 +1,5 @@
 $TTL    604800
+; $ORIGIN luki.test.home.
 @    IN    SOA    ns1.luki.test.home. luki.test.home. (
                   3        ; Serial
              604800        ; Refresh

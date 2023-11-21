@@ -9,6 +9,8 @@ import (
 type Writer struct {
 	dns.ResponseWriter
 	Msg *dns.Msg
+	// protocol i.e. udp, tcp, quic
+	//proto string
 }
 
 // New makes and returns a new NonWriter.
